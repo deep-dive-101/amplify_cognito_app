@@ -1,0 +1,153 @@
+{
+  "auth": {
+    "authtest": {
+      "customAuth": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "authtestCreateAuthChallenge",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "authtestDefineAuthChallenge",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "authtestPreSignup",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "authtestVerifyAuthChallengeResponse",
+          "triggerProvider": "Cognito"
+        }
+      ],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "PHONE_NUMBER"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "verificationMechanisms": [
+          "PHONE_NUMBER"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "authtestCreateAuthChallenge": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "authtestDefineAuthChallenge": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "authtestPreSignup": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "authtestVerifyAuthChallengeResponse": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_authtestCreateAuthChallenge_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "authtestCreateAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_authtestCreateAuthChallenge_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "authtestCreateAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_authtestDefineAuthChallenge_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "authtestDefineAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_authtestDefineAuthChallenge_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "authtestDefineAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_authtestPreSignup_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "authtestPreSignup"
+        }
+      ]
+    },
+    "AMPLIFY_function_authtestPreSignup_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "authtestPreSignup"
+        }
+      ]
+    },
+    "AMPLIFY_function_authtestVerifyAuthChallengeResponse_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "authtestVerifyAuthChallengeResponse"
+        }
+      ]
+    },
+    "AMPLIFY_function_authtestVerifyAuthChallengeResponse_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "authtestVerifyAuthChallengeResponse"
+        }
+      ]
+    }
+  }
+}
