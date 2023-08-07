@@ -123,7 +123,8 @@ function App() {
                 </Button>
           </div>
         )}
-        {user && (
+
+        { user && ( 
         <div>
           <ButtonGroup>
             <Button variant='outline-danger' onClick={signOut}>
@@ -132,6 +133,7 @@ function App() {
           </ButtonGroup>
         </div>
         )}
+
       </header>
     </div>
   );
