@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Passwordless OTP-based authentication using Amplify and Cognito user pool
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
